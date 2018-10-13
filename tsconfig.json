@@ -3,13 +3,11 @@
     "strict": true,
     "target": "es6",
     "module": "commonjs",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": true,
-    "types": [
-      "lodash"
-    ]
+    "experimentalDecorators": true
   },
   "files": [
     "hello.ts"

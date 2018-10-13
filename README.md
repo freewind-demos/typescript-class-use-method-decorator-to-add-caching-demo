@@ -1,19 +1,12 @@
-TypeScript tsconfig.json Demo
-============================
+TypeScript Class Decorator Add Method Demo
+===========================================
 
-`tsconfig.json`是typescript项目的说明文件，指定`tsc`所需要的各个参数。
+在typescript中使用decorator对一个class进行增强，比如可以给它增加一个方法。
+
+不过我发现，在定义decorator的时候，它是没有类型的，并且新增加的方法也不能添加到原有class的类型中。
 
 ```
 npm install
-npm run tsc
-```
-
-或者使用`ts-node`:
-
-```
 npm run demo
 ```
 
-Resources
----------
-- tsconfig详解：<https://www.typescriptlang.org/docs/handbook/tsconfig-json.html>
