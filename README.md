@@ -1,9 +1,9 @@
-TypeScript Class Decorator Add Method Demo
+TypeScript Class Method Decorator Demo
 ===========================================
 
-在typescript中使用decorator对一个class进行增强，比如可以给它增加一个方法。
+可以对class中的method进行decorating.
 
-不过我发现，在定义decorator的时候，它是没有类型的，并且新增加的方法也不能添加到原有class的类型中。
+TODO: 这个demo里，好像decorator执行完以后，method才执行。怎么让decorator在方法的前后执行？
 
 注意：需要在`tsconfig.json`中开启：`experimentalDecorators`
 

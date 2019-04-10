@@ -1,16 +1,21 @@
-function hello<T extends {new(...args: any[]): {}}>(constructor: T) {
-  console.log(constructor);
-  return class extends constructor {
-    hello = () => {
-      console.log(`Hello, ${(this as any).name}!`)
-    }
+function logging() {
+  return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+    console.log(`enter: ${propertyKey}`)
+    console.log(target);
+    console.log(`exit: ${propertyKey}`)
   }
 }
 
-@hello
 class User {
-  name: string = 'Typescript'
+  constructor(public name: string) {
+  }
+
+  @logging()
+  hello() {
+    console.log(`Hello, ${this.name}!`);
+  }
 }
 
-const user = new User();
-console.log((user as any).hello());
+
+const user = new User('typescript')
+user.hello()
