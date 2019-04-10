@@ -5,6 +5,8 @@ TypeScript Class Decorator Add Method Demo
 
 不过我发现，在定义decorator的时候，它是没有类型的，并且新增加的方法也不能添加到原有class的类型中。
 
+注意：需要在`tsconfig.json`中开启：`experimentalDecorators`
+
 ```
 npm install
 npm run demo
