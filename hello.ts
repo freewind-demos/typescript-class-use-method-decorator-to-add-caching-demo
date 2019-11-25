@@ -1,21 +1,23 @@
-function logging() {
-  return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
-    console.log(`enter: ${propertyKey}`)
-    console.log(target);
-    console.log(`exit: ${propertyKey}`)
+import Api from './api';
+
+async function main() {
+  const api = new Api();
+
+  const appNames = await api.fetchAppNames();
+  for (const appName of appNames) {
+    const version = await api.fetchAppVersion(appName);
+    console.log(`${appName}: ${version}`);
   }
 }
 
-class User {
-  constructor(public name: string) {
-  }
-
-  @logging()
-  hello() {
-    console.log(`Hello, ${this.name}!`);
-  }
-}
-
-
-const user = new User('typescript')
-user.hello()
+main();
+main();
+main();
+main();
+main();
+main();
+main();
+main();
+main();
+main();
+main();

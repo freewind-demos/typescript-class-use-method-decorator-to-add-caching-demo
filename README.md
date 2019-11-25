@@ -1,11 +1,7 @@
-TypeScript Class Method Decorator Demo
-===========================================
+TypeScript Class Method Decorator to Add Caching Demo
+=====================================================
 
-可以对class中的method进行decorating.
-
-TODO: 这个demo里，好像decorator执行完以后，method才执行。怎么让decorator在方法的前后执行？
-
-注意：需要在`tsconfig.json`中开启：`experimentalDecorators`
+如何在decorator重写原method，调用函数并存储其值。
 
 ```
 npm install
